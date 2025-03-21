@@ -27,7 +27,7 @@
         <BodyPart part="mustache" :anchor="{ x: 440.5, y: 159.5 }" :rotation="headRotation">
           <path
             class="mustache"
-            fill="blue"
+            :fill="`var(--color-accent)`"
             d="M434 108c7.2-2.4 17 5 21 9 9-6 5.2-20.7 22 0 13 16 31.2 9.5 41.5 7.5-1.7 4.3-13.5 9.7-21.5 14.5-10 6-21-2-30-8s-12 0-21 0-30 15-40 13c-8-1.6-12-9.3-13-13 29 4 32-20 41-23Z"
           />
           <text x="420" y="90" font-size="36">{{ countdownTimer[0] }}</text>
@@ -221,7 +221,7 @@ g {
 
 svg {
   fill: var(--bg-color);
-  stroke: var(--color);
+  stroke: var(--bg-color-accent);
   transition: transform 1000ms linear;
   margin: 0 auto;
   max-height: 50vh;

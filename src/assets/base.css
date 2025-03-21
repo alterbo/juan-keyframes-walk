@@ -1,13 +1,16 @@
 :root {
   --bg-color: #fff;
-  --color: #262626;
+  --bg-color-accent: #f0f0f0;
+  --color: #383838;
   --color-accent: blue;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #363636;
+    --bg-color-accent: #0e0e0e;
     --color: #c3c3c3;
+    --color-accent: #e9e916;
   }
 }
 

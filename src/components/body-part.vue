@@ -1,7 +1,7 @@
 <template>
   <g :transform="computedTransform">
     <slot />
-    <circle :cx="anchor.x" :cy="anchor.y" r="5" fill="blue" />
+    <circle :cx="anchor.x" :cy="anchor.y" r="5" :fill="`var(--color-accent)`" />
   </g>
 </template>
 
