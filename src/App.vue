@@ -103,7 +103,7 @@
   <button :disabled="isAnimating" @click="startAnimation">Walk</button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onUnmounted } from 'vue'
 import BodyPart from './components/body-part.vue'
 
@@ -117,8 +117,8 @@ const topRotation = ref(0)
 const verticalTranslation = ref(0)
 const isAnimating = ref(false)
 const countdownTimer = ref('10')
-let intervalId
-let timeoutId
+let intervalId: number
+let timeoutId: number
 
 const stepRotations = [
   {
