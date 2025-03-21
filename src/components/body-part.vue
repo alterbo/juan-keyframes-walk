@@ -1,7 +1,13 @@
 <template>
-  <g :transform="computedTransform">
+  <g
+    :transform="computedTransform"
+    :style="{
+      transformOrigin: `${props.anchor.x}px ${props.anchor.y}px`,
+      transform: `rotate(${props.rotation}deg)`,
+    }"
+  >
     <slot />
-    <circle :cx="anchor.x" :cy="anchor.y" r="5" :fill="`var(--color-accent)`" />
+    <circle :cx="anchor.x" :cy="anchor.y" r="8" :fill="`var(--bg-color-accent)`" stroke="none" />
   </g>
 </template>
 
@@ -17,6 +23,8 @@ interface Props {
 const props = defineProps<Props>()
 
 const computedTransform = computed(() => {
-  return `rotate(${props.rotation}, ${props.anchor.x}, ${props.anchor.y})`
+  const x = Math.round(props.anchor.x)
+  const y = Math.round(props.anchor.y)
+  return `rotate(${props.rotation}, ${x}, ${y})`
 })
 </script>

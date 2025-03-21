@@ -221,7 +221,7 @@ g {
 
 svg {
   fill: var(--bg-color);
-  stroke: var(--bg-color-accent);
+  stroke: var(--color-accent);
   transition: transform 1000ms linear;
   margin: 0 auto;
   max-height: 50vh;
@@ -229,10 +229,10 @@ svg {
   text {
     fill: var(--color-accent);
   }
-}
-
-path:not(.mustache) {
-  fill: var(--bg-color);
+  path:not(.mustache) {
+    fill: var(--bg-color);
+    stroke-width: 3;
+  }
 }
 
 .header {
